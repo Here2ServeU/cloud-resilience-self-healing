@@ -1,0 +1,4 @@
+prometheus-api-client
+datadog-api-client
+kubernetes
+pyyaml

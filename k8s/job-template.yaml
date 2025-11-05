@@ -1,0 +1,15 @@
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: remediation-job
+  namespace: sre
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: remediation
+        image: bitnami/kubectl:latest
+        command: ["sh","-c","kubectl rollout restart deployment/web-app -n default || true"]
+  backoffLimit: 1
