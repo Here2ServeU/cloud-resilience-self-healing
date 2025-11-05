@@ -3,6 +3,8 @@
 
 A Python **AIOps** starter that detects anomalies (Prometheus/Datadog) and triggers **automated remediation** via Kubernetes Jobs. Deploy the cluster using Terraform on **EKS, AKS, GKE, or OKE**, then install the AIOps components.
 
+> Working on this project. I'm very excited!
+
 ## Steps
 1) Provision a cluster (pick a cloud) under `infra/terraform/<cloud>`
 2) `kubectl apply -f k8s/` to install RBAC/namespace
