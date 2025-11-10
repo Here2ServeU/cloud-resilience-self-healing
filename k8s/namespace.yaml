@@ -1,5 +1,7 @@
-
 apiVersion: v1
 kind: Namespace
 metadata:
   name: sre
+  labels:
+    app.kubernetes.io/name: cloud-resilience-aiops
+    app.kubernetes.io/part-of: aiops
