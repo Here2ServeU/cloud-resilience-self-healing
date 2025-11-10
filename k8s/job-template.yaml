@@ -1,15 +1,33 @@
-
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: remediation-job
+  name: remediation-job-template
   namespace: sre
+  labels:
+    app: aiops-remediation
 spec:
   template:
+    metadata:
+      labels:
+        app: aiops-remediator
     spec:
+      serviceAccountName: aiops-service-account
       restartPolicy: Never
       containers:
-      - name: remediation
-        image: bitnami/kubectl:latest
-        command: ["sh","-c","kubectl rollout restart deployment/web-app -n default || true"]
-  backoffLimit: 1
+        - name: remediator
+          image: alpine:3.20
+          command:
+            - /bin/sh
+            - -c
+            - |
+              echo "Running remediation for $METRIC_NAME"
+              echo "Z-Score: $ZSCORE"
+              echo "Strategy: $STRATEGY"
+              sleep 5
+          env:
+            - name: METRIC_NAME
+              value: "cpu_usage"
+            - name: ZSCORE
+              value: "3.5"
+            - name: STRATEGY
+              value: "generic"
