@@ -1,0 +1,26 @@
+namespace: sre
+image:
+  repository: python
+  tag: "3.11-slim"
+  pullPolicy: IfNotPresent
+
+config:
+  PROVIDER: "prometheus"
+  PROM_URL: "http://prometheus.monitoring.svc.cluster.local:9090"
+  PROM_QUERY: 'rate(container_cpu_usage_seconds_total{namespace="apps"}[2m])'
+  STDDEV_MULTIPLIER: "3.0"
+  KUBE_NAMESPACE: "sre"
+  REMEDIATION_STRATEGY: "generic"
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+
+serviceAccount:
+  name: aiops-service-account
+
+replicaCount: 1
