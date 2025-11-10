@@ -1,0 +1,15 @@
+apiVersion: v2
+name: aiops
+description: AIOps Cloud Resilience & Self-Healing Automation Helm Chart
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+maintainers:
+  - name: Emmanuel Naweji
+    email: emmanuelnt02@gmail.com
+keywords:
+  - AIOps
+  - DevOps
+  - Kubernetes
+  - Terraform
+  - Self-Healing
