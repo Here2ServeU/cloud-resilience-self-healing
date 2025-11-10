@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aiops-config
+  namespace: {{ .Values.namespace }}
+data:
+  PROVIDER: {{ .Values.config.PROVIDER | quote }}
+  PROM_URL: {{ .Values.config.PROM_URL | quote }}
+  PROM_QUERY: {{ .Values.config.PROM_QUERY | quote }}
+  STDDEV_MULTIPLIER: {{ .Values.config.STDDEV_MULTIPLIER | quote }}
+  KUBE_NAMESPACE: {{ .Values.config.KUBE_NAMESPACE | quote }}
+  REMEDIATION_STRATEGY: {{ .Values.config.REMEDIATION_STRATEGY | quote }}
