@@ -1,6 +1,6 @@
 # Cloud Resilience & Self-Healing Automation — Terraform + Multi-Cloud Kubernetes (AIOps Starter)
 **Author:** Emmanuel Naweji  
-**Role:** Principal SRE | DevOps | Cloud & AI Platform Engineer  
+**Role:** Senior Cloud & Site Reliability Engineer | DevOps | Cloud & AI Platform  
 © 2025 Emmanuel Naweji — All Rights Reserved  
 
 ---

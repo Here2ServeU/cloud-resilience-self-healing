@@ -1,6 +1,6 @@
 # Getting Started with Cloud Resilience & Self-Healing Automation (AIOps Starter)
 **Author:** Emmanuel Naweji  
-**Role:** Principal SRE | DevOps | Cloud & AI Platform Engineer  
+**Role:** Senior Cloud & Site Reliability Engineer | DevOps | Cloud & AI Platform  
 © 2025 Emmanuel Naweji — All Rights Reserved  
 
 ---
